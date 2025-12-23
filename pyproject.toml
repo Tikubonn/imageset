@@ -1,0 +1,50 @@
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imageset"
+version = "1.0.0"
+dependencies = [
+  "pillow>=11.3.0",
+  "closeable@git+https://github.com/tikubonn/closeable.git@v1.0"
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "tikubonn"}
+]
+maintainers = [
+  {name = "tikubonn"}
+]
+description = "It acts as a proxy for Pillow's image reading and writing functions."
+readme = "README.md"
+license = "AGPL-3.0"
+license-files = ["LICEN[CS]E"]
+keywords = []
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.4.2"
+]
+
+[project.urls]
+Homepage = "https://github.com/tikubonn/imageset"
+Documentation = "https://github.com/tikubonn/imageset/README.md"
+Repository = "https://github.com/tikubonn/imageset.git"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = [
+  "imageset"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v"
+testpaths = [
+  "test"
+]
